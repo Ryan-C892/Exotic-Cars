@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="resource-type" content="global">
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css" >
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/form.css">
+<link rel="stylesheet" type="text/css" href="css/inventory.css">
+<link rel="stylesheet" type="text/css" href="css/nav.css">
+    
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--Main Header-->
+    <header class="header" role="banner">
+        <div class="overlay"></div>
+        <nav class="navbar navbar-expand-md" >
+            <a class="navbar-brand mr-auto" href="/index.html">Joe Exotic Cars</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar navbar-nav mr-auto">
+                <li class="dropdown">
+                    <a class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Inventory</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="currentinventory.html">Current Inventory</a>
+                    <a class="dropdown-item" href="recentlysold.html">Recently Sold</a>
+                    <a class="dropdown-item" href="newmodels.html">New Exotic Vehicles</a>
+                    <a class="dropdown-item" href="vehiclefinder.html">Vehicle Finder</a>
+                </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="shop.html">Sell</a></li>
+                <li class="nav-item"><a class="nav-link" href="consign.html">Consign</a></li>
+                <li class="dropdown">
+                    <a class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"aria-expanded="false">Finance</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="customfinancing.html">Custom Financing</a>
+                    <a class="dropdown-item" href="loancalculator.html">Loan Calculator</a>
+                    <a class="dropdown-item" href="creditapplication.html">Credit Application</a>
+                </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+    <div class="nav-item" style="font-size: 18px; color: #fff; margin-top: 15px; margin-left: 20px;"><script src="js/add-content.js"></script>
+        <i class="fa fa-phone" style="padding-left: 36px;"></i> <small>925-200-000</small> <i class="fa fa-map" style="padding-left:12px;"></i> <small>900 Smith Drive, Livermore CA, 94551</small>
+    </div>
+    </header>
+<!--Main Body-->
+<div class="container">
+<div class="container-fluid">
+<h1 class="header" style="font-family: Raleway, sans-serif; font-size: 36px;">Recently Sold</h1> 
+<!--Search Options-->
+    <div class="row" style="border:none;">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="row inventory-list" style="border:none;">
+                <div class="col-sm-12">
+                <div class="palette-bg2 inventory-header" style="padding-right: 8px; line-height: 28px;">
+                    <div class="pull-left" style="padding-right: 8px; line-height: 28px;">
+                        <b>Search Options:</b>
+                    </div>                
+                    <div class="pull-left">
+                    <div class="btn-group btn-group-sm" role="group">
+                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                        Fuel
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:Go(currentinventory.html?fuel=Diesel)" title="Fuel: Diesel (1)">Diesel (1)</a></li>
+                        <li><a href="javascript:Go(currentinventory.html?fuel=Gasoline)" title="Fuel: Gasoline (10)">Gasoline (10)</a></li>
+                        <li><a href="javascript:Go(currentinventory.html?fuel=Hybrid)" style="Fuel: Hybrid (1)">Hybrid (1)</a></li>
+                        <li><a href="javascript:Go(currentinventory.html?fuel=Electric)" title="Fuel: Electric (1)">Electric (1)</a></li>
+                    </ul>
+                    </div>
+                    <div class="btn-group btn-group-sm" role="group">
+                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                        Make
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:Go(currentinventory.html?make=BMW)" title="Make: BMW (1)">BMW (1)</a></li>
+                        <li><a href="javascript:Go(currentinventory.html?make=Ferrari)" title="Make: Ferrari (1)">Ferrari (1)</a></li>
+                        <li><a href="javascript:Go(currentinventory.html?make=Jaguar)" title="Make: Jaguar (1)">Jaguar (1)</a></li>
+                        <li><a href="javascript:Go(currentinventory.html?make=Porsche)" title="Make: Porsche (1)">Porsche (1)</a></li>
+                        <li><a href="javascript:Go(currentinventory.html?make=Lamborghini)" title="Make: Lamborghini (1)">Lamborghini (1)</a></li>
+                    </ul>
+                    </div>
+                        <whitespace></whitespace>
+                    <div class="btn-group btn-group-sm" role="group">
+                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                        Model
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <!--BMW-->
+                        <li><a href="javascript:Go(currentinventory.html?model=M6)" title="Model: M6 (1)">M6 (1)</a></li>
+                        <!--Ferrari-->
+                        <li><a href="javascript:Go(currentinventory.html?model=488GTB)" title="Model: 488 GTB (1)">488 GTB (1)</a></li>
+                        <!--Jaguar-->
+                        <li><a href="javascript:Go(currentinventory.html?model=F-Type)" title="Model: F-Type (1)">F-Type (1)</a></li>
+                        <!--Porsche-->
+                        <li><a href="javascript:Go(currentinventory.html?model=Cayenne)" title="Model: Cayenne (1)">Cayenne (1)</a></li>
+                        <!--Lamborghini-->
+                        <li><a href="javascript:Go(currentinventory.html?model=Huracan)" title="Model: Huracan (1)">Huracan (1)</a></li>
+                    </ul>
+                    </div>
+                        <whitespace></whitespace>
+                    <div class="btn-group btn-group-sm" role="group">
+                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                        Year
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:Go(currentinventory.html?year=2020)" title="Year: 2020">2020 (1)</a></li>
+                        <li><a href="javascript:Go(currentinventory.html?year=2019)" title="Year: 2019">2019 (1)</a></li>
+                        <li><a href="javascript:Go(currentinventory.html?year=2017)" title="Year: 2017">2017 (1)</a></li>
+                        <li><a href="javascript:Go(currentinventory.html?year=2016)" title="Year: 2016">2016 (1)</a></li>
+                        <li><a href="javascript:Go(currentinventory.html?year=2013)" title="Year: 2013">2013 (1)</a></li>
+                        <li><a href="javascript:Go(currentinventory.html?year=1996)" title="Year: 1996">1996 (1)</a></li>
+                        <li><a href="javascript:Go(currentinventory.html?year=1972)" title="Year: 1972">1972 (1)</a></li>
+                    </ul>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+    </div>
+<!--Main Inventory-->
+<div class="container inventory-list-container col-sm-12" style="background: none;">
+    <script defer=""> Storage.prototype.getObj = function (key) { return JSON.parse(this.getItem(key)) } var globalItemArray = []; var testy= ""; var maxVehic = 2; var htmlCompareList = []; var htmlCompareObj = {}; var urlConnect = 'https://clients.automanager.com/Scripts/ComparisonInfo.aspx/GetCompareVehicleInfo'; var clientUrl = "httpz://clients.automanager.com/"; var _styleId = "LST"; var itemsArraySession = sessionStorage.getObj("CompareIds-" + '033666')</script>
+    <div class="inventory-heading">BMW</div>
+        <div class="inventory-panel palette-bg2">
+            <div class="row" style="padding: 2px;">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div style="width:100%; margin-top: 8px; text-align: left; text-decoration: underline;">
+                    <b>2013 BMW M6 Convertible</b>
+                </div>
+                <div style="width: 100%; margin-top: 8px; text-align: left; text-decoration: underline;">
+                    <b>21,470 Miles and MSRP of $122,300</b>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+            <div class="palette-bg1 inventory-photo col-sm-12">
+                <img class="inventory-photo" style=" width: 100%; margin:0;" src="images/2013-BMW-M6-Convertible-Front.jpg">
+            </div>    
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                <ul class="inventory-details">
+                    <li>Color: Marine Blue</li>
+                    <li>Transmission: Automatic</li>
+                    <li>Fuel: Gasoline</li>
+                    <li>Engine: 4.4 L Twin-Turbo V8 552hp</li>
+                    <li>Mileage: 21,470 miles</li>
+                </ul>    
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                <ul class="inventory-details">
+                    <li>VIN: WGTOOF1V23GRJ3356</li>
+                    <li>Stock #: R-0010</li>
+                </ul>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                <ul class="inventory-details">
+                    <li>Sale Pending</li>
+                </ul>    
+                <div class="inventory-report" style="width: 100%; margin: 0px;">
+                     <a href="https://www.autocheck.com/vehiclehistory/?siteID=0" target="_blank" title= "Click to view the FREE AutoCheck Vehicle Report">
+                    <img src="http://automanager.blob.core.windows.net/wmcontent/clients/images/reports/autocheckreport.png" style="margin-bottom: 5px;" alt="FREE AutoCheck Vehicle Report">
+                    <br>
+                    FREE AutoCheck
+                    <br>
+                    Vehicle Report       
+                    </a>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="inventory-heading">Ferrari</div>
+        <div class="inventory-panel palette-bg2">
+            <div class="row" style="padding: 2px;">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div style="width:100%; margin-top: 8px; text-align: left; text-decoration: underline;">
+                    <b>2019 Ferrari 488 GTB</b>
+                </div>
+                <div style="width: 100%; margin-top: 8px; text-align: left; text-decoration: underline;">
+                    <b> 5,901 Miles and MSRP of $262,647</b>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+            <div class="palette-bg1 inventory-photo col-sm-12">
+                <img class="inventory-photo" style=" width: 100%; margin:0;" src="images/Used-2019-Ferrari-488-GTB.jpg">
+            </div>    
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                <ul class="inventory-details">
+                    <li>Color: Black</li>
+                    <li>Transmission: Automatic</li>
+                    <li>Fuel: Gasoline</li>
+                    <li>Engine: 3.9 L turbocharged V8 660 hp</li>
+                    <li>Mileage: 5,901 miles</li>
+                </ul>    
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                <ul class="inventory-details">
+                    <li>VIN: AYR00QE123AW1129</li>
+                    <li>Stock # M-2799</li>
+                </ul>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                <ul class="inventory-details">
+                    <li>Sale Pending</li>
+                </ul> 
+                <div class="inventory-report" style="width: 100%; margin: 0px;">
+                    <a href="https://www.autocheck.com/vehiclehistory/?siteID=0" target="_blank" title= "Click to view the FREE AutoCheck Vehicle Report">
+                    <img src="http://automanager.blob.core.windows.net/wmcontent/clients/images/reports/autocheckreport.png" style="margin-bottom: 5px;" alt="FREE AutoCheck Vehicle Report">
+                    <br>
+                    FREE AutoCheck
+                    <br>
+                    Vehicle Report
+                    </a>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="inventory-heading">Jaguar</div>
+        <div class="inventory-panel palette-bg2">
+            <div class="row" style="padding: 2px;">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div style="width:100%; margin-top: 8px; text-align: left; text-decoration: underline;">
+                    <b>2017 Jaguar F-Type Coupe</b>
+                </div>
+                <div style="width: 100%; margin-top: 8px; text-align: left; text-decoration: underline;">
+                    <b>14,124 Miles and MSRP of $62,395</b>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+            <div class="palette-bg1 inventory-photo col-sm-12">
+                <img class="inventory-photo" style=" width: 100%; margin:0;" src="images/$_86.JPG">
+            </div>    
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                <ul class="inventory-details">
+                    <li>Color: Blue</li>
+                    <li>Transmission: Automatic</li>
+                    <li>Fuel: Gasoline</li>
+                    <li>Engine: 5.0 L supercharged V8 575 hp</li>
+                    <li>Mileage: 14,124 miles</li>
+                </ul>    
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                <ul class="inventory-details">
+                    <li>VIN: KAWPGE1H47AUH7170</li>
+                    <li>Stock #: M-1944</li>
+                </ul>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                <ul class="inventory-details">
+                    <li>Sale Pending</li>
+                </ul>    
+                <div class="inventory-report" style="width: 100%; margin: 0px;">
+                     <a href="https://www.autocheck.com/vehiclehistory/?siteID=0" target="_blank" title= "Click to view the FREE AutoCheck Vehicle Report">
+                    <img src="http://automanager.blob.core.windows.net/wmcontent/clients/images/reports/autocheckreport.png" style="margin-bottom: 5px;" alt="FREE AutoCheck Vehicle Report">
+                    <br>
+                    FREE AutoCheck
+                    <br>
+                    Vehicle Report
+                    </a>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="inventory-heading">Porsche</div>
+        <div class="inventory-panel palette-bg2">
+            <div class="row" style="padding: 2px;">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div style="width:100%; margin-top: 8px; text-align: left; text-decoration: underline;">
+                    <b>2013 Porsche 911 Carrera S Coupe</b>
+                </div>
+                <div style="width: 100%; margin-top: 8px; text-align: left; text-decoration: underline;">
+                    <b>25,142 Miles and MSRP of $82,100</b>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+            <div class="palette-bg1 inventory-photo col-sm-12">
+                <img class="inventory-photo" style=" width: 100%; margin:0;" src="images/s-l1600-12.jpg">
+            </div>    
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                <ul class="inventory-details">
+                    <li>Color: Silver</li>
+                    <li>Transmission: Automatic</li>
+                    <li>Fuel: Gasoline</li>
+                    <li>Engine: 3.8 L H6 400hp</li>
+                    <li>Mileage: 25,142 miles</li>
+                </ul>    
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                <ul class="inventory-details">
+                    <li>VIN: OA0FW64F01HN12948</li>
+                    <li>Stock #: M-8925</li>
+                </ul>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                <ul class="inventory-details">
+                    <li>Sale Pending</li>
+                </ul> 
+                <div class="inventory-report" style="width: 100%; margin: 0px;">
+                    <a href="https://www.autocheck.com/vehiclehistory/?siteID=0" target="_blank" title= "Click to view the FREE AutoCheck Vehicle Report">
+                    <img src="http://automanager.blob.core.windows.net/wmcontent/clients/images/reports/autocheckreport.png" style="margin-bottom: 5px;" alt="FREE AutoCheck Vehicle Report">
+                    <br>
+                    FREE AutoCheck
+                    <br>
+                    Vehicle Report
+                    </a>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="inventory-heading">Lamborghini</div>
+        <div class="inventory-panel palette-bg2">
+            <div class="row" style="padding: 2px;">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div style="width:100%; margin-top: 8px; text-align: left; text-decoration: underline;">
+                    <b>2020 Lamborghini Huracan Evo Coupe</b>
+                </div>
+                <div style="width: 100%; margin-top: 8px; text-align: left; text-decoration: underline;">
+                    <b>743 Miles and MSRP of $261,274</b>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+            <div class="palette-bg1 inventory-photo col-sm-12">
+                <img class="inventory-photo" style=" width: 100%; margin:0;" src="images/a205e5a6dfa5570545ee6b7a86526ed6x.jpg">
+            </div>    
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                <ul class="inventory-details">
+                    <li>Color: Red</li>
+                    <li>Transmission: 7-speed Dual Clutch</li>
+                    <li>Fuel: Gasoline</li>
+                    <li>Engine: 5.2 L V10 630 hp</li>
+                    <li>Mileage: 743 miles</li>
+                </ul>    
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                <ul class="inventory-details">
+                    <li>VIN: PWG410490OS019568</li>
+                    <li>Stock #: M-6791</li>
+                </ul>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                <ul class="inventory-details">
+                    <li>Sale Pending</li>
+                </ul>
+                <div class="inventory-report" style="width: 100%; margin: 0px;">
+                     <a href="https://www.autocheck.com/vehiclehistory/?siteID=0" target="_blank" title= "Click to view the FREE AutoCheck Vehicle Report">
+                    <img src="http://automanager.blob.core.windows.net/wmcontent/clients/images/reports/autocheckreport.png" style="margin-bottom: 5px;" alt="FREE AutoCheck Vehicle Report">
+                    <br>
+                    FREE AutoCheck
+                    <br>
+                    Vehicle Report
+                    </a>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="clearfix"></div>
+<!--End Main Inventory-->
+</div>
+<!--Footer-->
+<footer class="background-image" style="margin-bottom:0;">
+ <div class="footer-container" style="padding: 0; border:none;"> 
+    <div class="row footer-row">
+      <div class="col-4" style="height: 240px;">
+          <div class="col-12">
+              <a class="footer-brand clearfix" href="index.html">Joe Exotic Cars</a>
+            <h4>Contact Info</h4>
+              <ul>
+                  <li><i class="fa fa-home"></i><span style="margin: 10px;">Joe Exotic Cars</span></li>
+                  <li><i class="fa fa-map"></i><span style="margin: 10px;">900 Smith Dr, Livermore, CA 94551</span></li>
+                  <li><i class="fa fa-phone"></i><span style="margin: 10px;">925-200-0000</span></li>
+                  <li><i class="fa fa-envelope"></i><span style="margin: 10px;">sales@joeexotic.com</span></li>
+              </ul> 
+        </div>
+        <div class="col-12">
+          <div class="social-media-links light small clearfix">
+        <span class="fa-stack fa-lg">
+            <a class="fa fa-facebook-square fa-stack-2x" href="https://www.facebook.com" target="_blank"></a>
+        </span>
+        <span class="fa-stack fa-lg">
+            <a class="fa fa-twitter fa-stack-2x" href="https://www.twitter.com" target="_blank"></a>
+        </span>
+        <span class="fa-stack fa-lg">
+            <a class="fa fa-instagram fa-stack-2x" href="https://www.instagram.com" target="_blank"></a>
+        </span>
+        <span class="fa-stack fa-lg">
+            <a class="fa fa-yelp fa-stack-2x" href="https://www.yelp.com" target="_blank"></a>
+        </span>
+        </div>
+        <!--CopyRight-->
+        <div class="col-xs-12" style="color:#fff; padding-left:2px;">&copy;
+            <script type="text/javascript">
+                document.write(new Date().getFullYear());
+            </script>
+        </div>
+        </div>
+    </div>
+      <div class="col-lg-2">
+        <h4>Inventory</h4>
+          <ul class="listed-unstyled text-small">
+            <li><a href="currentinventory.html">Current Inventory</a></li>
+            <li><a href="recentlysold.html">Recently Sold</a></li>
+            <li><a href="newmodels.html">New Models</a></li>
+            <li><a href="vehiclefinder.html">Vehicle Finder</a></li>
+          </ul>
+      </div>
+      <div class="col-lg-2">
+        <h4>About Us</h4>
+          <ul class="list-unstyled text-small" style="margin-left: 35px;">
+            <li><a href="about.html">Our Team</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+      </div>
+      <div class="col-lg-4">
+        <span style="display: inline-block; width: 100%; height: 100%; padding-top: 50%; background-size: cover; background-repeat: no-repeat; background-position: center center; background-image:url(images/red-lamborghini-in-parking-lot-4119603.jpg)">
+        </span>
+      </div>
+  </div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="resource-type" content="global">
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css" >
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/form.css">
+<link rel="stylesheet" type="text/css" href="css/nav.css">
+    
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--Main Header-->
+    <header class="header" role="banner">
+        <div class="overlay"></div>
+        <nav class="navbar navbar-expand-md" >
+            <a class="navbar-brand mr-auto" href="/index.html">Joe Exotic Cars</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar navbar-nav mr-auto">
+                <li class="dropdown">
+                    <a class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Inventory</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="currentinventory.html">Current Inventory</a>
+                    <a class="dropdown-item" href="recentlysold.html">Recently Sold</a>
+                    <a class="dropdown-item" href="newmodels.html">New Exotic Vehicles</a>
+                    <a class="dropdown-item" href="vehiclefinder.html">Vehicle Finder</a>
+                </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="shop.html">Sell</a></li>
+                <li class="nav-item"><a class="nav-link" href="consign.html">Consign</a></li>
+                <li class="dropdown">
+                    <a class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"aria-expanded="false">Finance</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="customfinancing.html">Custom Financing</a>
+                    <a class="dropdown-item" href="loancalculator.html">Loan Calculator</a>
+                    <a class="dropdown-item" href="creditapplication.html">Credit Application</a>
+                </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+    <div class="nav-item" style="font-size: 18px; color: #fff; margin-top: 15px; margin-left: 20px;"><script src="js/add-content.js"></script>
+        <i class="fa fa-phone" style="padding-left: 36px;"></i> <small>925-200-000</small> <i class="fa fa-map" style="padding-left:12px;"></i> <small>900 Smith Drive, Livermore CA, 94551</small>
+    </div>
+    </header>
+<!--Main Body-->
+<div class="container">
+<div class="container-fluid">
+    <h1 class="header" style="font-size: 36px;">Contact Us</h1>
+<!--Contact Form-->
+<form class="form-inline" action="/action_page.php" id="form" method="post" style="padding: 0px; margin-top: 2px;"> 
+    <input type="hidden" name="xControlId" value="form">
+<div class="row">
+    <div class="col-sm-12">
+        <div class="text-info required-indicator accent-color2">
+            <b class="text-info accent-color1">*</b>Required Field
+        </div>
+    </div>
+<!--Customer Info-->
+    <div class="row" style="border:none; margin-bottom:20px;">
+        <div class="col-sm-4">
+          <div class="form" style="display:inline-table; margin-right: 100px;">
+                <div class="form-group col">
+                    <label for="First Name">
+                        <b>First Name</b>
+                    <b class="text-info accent-color1">*</b>
+                    </label>
+                    <div class="input-group col-sm-8" style="padding-left: 0px;">
+                        <input class="form-control" type="text" id="FirstName" placeholder="Enter First Name" name="FirstName" required>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label for="LastName">
+                        <b>Last Name</b>
+                    <b class="text-info accent-color1">*</b>
+                    </label>
+                    <div class="input-group col-sm-8" style="padding-left: 0px;">
+                    <input class="form-control" type="text" id="LastName" placeholder="Enter Last Name" name="LastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" style="margin-right: 6px;">
+                        <b>Email</b>
+                    <b class="text-info accent-color1">*</b>
+                    </label>
+                    <div class="input-group col-sm-10" style="padding-left: 0px;">
+                        <span class="input-icon">
+                        <i class="fa fa-envelope"></i>
+                        </span>
+                        <input class="form-control" type="email" id="email" placeholder="Enter Email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="WorkPhoneNumber" style="margin-right: 6px;">
+                        <b>Work Phone</b>
+                    <b class="text-info accent-color1">*</b>
+                    </label>
+                    <div class="input-group col-sm-10" style="padding-left: 0px;">
+                    <span class="input-icon"><i class="fa fa-phone"></i></span>
+                        <input class="form-control" type="text" id="WorkPhoneNumber" placeholder="Enter Work Number" name="WorkPhoneNumber" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="HomePhoneNumber" style="margin-right: 6px;">
+                        <b>Home Phone</b> 
+                    <b class="text-info accent-color1">*</b>
+                    </label>
+                    <div class="input-group col-sm-10" style="padding-left:0px;">
+                    <span class="input-icon"><i class="fa fa-phone"></i></span>
+                        <input class="form-control" type="text" id="HomePhoneNumber" placeholder="Enter Home Number" name="HomePhoneNumber" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--Contact Info-->
+        <div class="col-sm-4">
+            <div class="form" style="display:inline-table; margin-right: 100px;">
+                <div class="form-group col">
+                    <label for="ContactPreference">
+                        <b>How Should We Contact You?</b>
+                    </label>
+                    <div class="input-group col-sm-8" style="padding-left:0px;">
+                    <select class="form-control" id="ContactPreference" name="ContactPreference">
+                        <option value="NoPreference">No Preference...</option>
+                        <option value="Phone">Phone</option>
+                        <option value="Email">Email</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label for="ContactTime">
+                        <b>When Should We Contact You?</b>
+                    </label>
+                    <div class="input-group col-sm-8" style="padding-left:0px;">
+                    <select class="form-control" id="ContactTime" name="ContactTime">
+                        <option value="">Any Time</option>
+                        <option value="1">Morning</option>
+                        <option value="2">Midday</option>
+                        <option value="3">Afternoon</option>
+                        <option value="4">Evening</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label for="PurchaseTime">
+                        <b>When Would You Like To Make A Purchase?</b>
+                    </label>
+                    <div class="input-group col-sm-8" style="padding-left:0px;">
+                    <select class="form-control" id="PurchaseTime" name="PurchaseTime">
+                        <option value="">Undecided</option>
+                        <option value="1">in 24 hours</option>
+                        <option value="2">in a few days</option>
+                        <option value="3">in 2 weeks</option>
+                        <option value="4">in a month</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label for="Comments">
+                        <b>Questions or Comments</b>
+                    </label>
+                    <div class="input-group col-sm-8" style="padding-left:0px;">
+                        <textarea id="Comments" class="form-control" name="Comments" placeholder="..." rows="4" maxlength="1000"></textarea>
+                    </div>
+                </div>
+            </div>
+            <button class="btn" type="submit" style="padding: 6px 105px; margin: 18px;">Submit</button>
+        </div>
+<!--Phone and Business Hours-->
+        <div class="col-sm-4">
+        <h3 class="content-header" style="font-size: 20px; margin-bottom: 20px;">Contact US</h3>
+            <span class="input-group">
+                <i class="fa fa-phone" style="color: #0263d1;"><i style="font-size: 20px;"> Main Phone:</i></i>
+            </span>
+            <p><em>925-200-000</em></p>
+            <span class="input-group">
+                <i class="fa fa-phone" style="color: #0263d1;"><i style="font-size: 20px;"> Fax:</i></i>
+            </span>
+            <p><em>925-200-2005</em></p>
+            <br>
+        <h3 class="content-header" style="font-size: 20px; margin-bottom: 20px;">Business Hours</h3>
+            <span class="input-group">
+                <i style="font-size: 18px; color: #0263d1;">Mon:</i> 9am-5pm
+            </span>
+            <span class="input-group">
+                <i style="font-size: 18px; color: #0263d1;">Tue:</i> 9am-5pm
+            </span>
+            <span class="input-group">
+                <i style="font-size: 18px; color: #0263d1;">Wed:</i> 9am-5pm
+            </span>
+            <span class="input-group">
+                <i style="font-size: 18px; color: #0263d1;">Thu:</i> 9am-5pm
+            </span>
+            <span class="input-group">
+                <i style="font-size: 18px; color: #0263d1;">Fri:</i> 9am-5pm
+            </span>
+            <span class="input-group">
+                <i style="font-size: 18px; color: #0263d1;">Sat:</i> By Appointment
+            </span>
+            <span class="input-group">
+                <i style="font-size: 18px; color: #0263d1;">Sun:</i> Closed
+            </span>
+        </div>
+    </div>
+</div>
+</form> 
+</div>
+</div>
+<!--Footer-->
+<footer class="background-image" style="margin-bottom:0;">
+ <div class="footer-container" style="padding: 0; border:none;"> 
+    <div class="row footer-row">
+      <div class="col-4" style="height: 240px;">
+          <div class="col-12">
+              <a class="footer-brand clearfix" href="index.html">Joe Exotic Cars</a>
+            <h4>Contact Info</h4>
+              <ul>
+                  <li><i class="fa fa-home"></i><span style="margin: 10px;">Joe Exotic Cars</span></li>
+                  <li><i class="fa fa-map"></i><span style="margin: 10px;">900 Smith Dr, Livermore, CA 94551</span></li>
+                  <li><i class="fa fa-phone"></i><span style="margin: 10px;">925-200-0000</span></li>
+                  <li><i class="fa fa-envelope"></i><span style="margin: 10px;">sales@joeexotic.com</span></li>
+              </ul> 
+        </div>
+        <div class="col-12">
+          <div class="social-media-links light small clearfix">
+        <span class="fa-stack fa-lg">
+            <a class="fa fa-facebook-square fa-stack-2x" href="https://www.facebook.com" target="_blank"></a>
+        </span>
+        <span class="fa-stack fa-lg">
+            <a class="fa fa-twitter fa-stack-2x" href="https://www.twitter.com" target="_blank"></a>
+        </span>
+        <span class="fa-stack fa-lg">
+            <a class="fa fa-instagram fa-stack-2x" href="https://www.instagram.com" target="_blank"></a>
+        </span>
+        <span class="fa-stack fa-lg">
+            <a class="fa fa-yelp fa-stack-2x" href="https://www.yelp.com" target="_blank"></a>
+        </span>
+        </div>
+        <!--CopyRight-->
+        <div class="col-xs-12" style="color:#fff; padding-left:2px;">&copy;
+            <script type="text/javascript">
+                document.write(new Date().getFullYear());
+            </script>
+        </div>
+        </div>
+    </div>
+      <div class="col-lg-2">
+        <h4>Inventory</h4>
+          <ul class="listed-unstyled text-small">
+            <li><a href="currentinventory.html">Current Inventory</a></li>
+            <li><a href="recentlysold.html">Recently Sold</a></li>
+            <li><a href="newmodels.html">New Models</a></li>
+            <li><a href="vehiclefinder.html">Vehicle Finder</a></li>
+          </ul>
+      </div>
+      <div class="col-lg-2">
+        <h4>About Us</h4>
+          <ul class="list-unstyled text-small" style="margin-left: 35px;">
+            <li><a href="about.html">Our Team</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+      </div>
+      <div class="col-lg-4">
+        <span style="display: inline-block; width: 100%; height: 100%; padding-top: 50%; background-size: cover; background-repeat: no-repeat; background-position: center center; background-image:url(images/red-lamborghini-in-parking-lot-4119603.jpg)">
+        </span>
+     </div>
+    </div>
+</div>
+</footer>
+</body>
+</html>
